@@ -1,0 +1,33 @@
+{
+  "name": "syncbridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Resilient, event-driven sync engine between GitHub Issues and an internal tracker.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest --runInBand",
+    "test:watch": "jest --runInBand --watch",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/infra/db/migrate.ts",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.3",
+    "drizzle-orm": "^0.36.4",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@testcontainers/postgresql": "^10.16.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.28.1",
+    "jest": "^29.7.0",
+    "testcontainers": "^10.16.0",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
